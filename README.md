@@ -1,3 +1,0 @@
-# recipes
-
-Personal recipe collection
