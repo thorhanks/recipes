@@ -5,7 +5,7 @@
                 <div
                     class="w-28 h-28 bg-cover rounded-lg hidden md:block"
                     :style="{
-                        'background-image': `url(../../public/recipe-photos/${imageFileName})`,
+                        'background-image': `url(${imageUrl})`,
                     }"
                 />
                 <div class="flex-1 md:pl-8">
@@ -92,7 +92,7 @@ export default {
         ingredients: [],
         directions: [],
         tags: [],
-        imageFileName: null,
+        imageUrl: null,
     }),
     methods: {
         $show(recipe) {
@@ -102,7 +102,7 @@ export default {
             this.ingredients = recipe.ingredients;
             this.directions = recipe.directions;
             this.tags = recipe.tags;
-            this.imageFileName = recipe.imageFileName;
+            this.imageUrl = recipe.imageUrl;
             this.$refs.modal.$show();
         },
     },

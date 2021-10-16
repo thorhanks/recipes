@@ -1,11 +1,12 @@
 import uuid from "../utilities/generate-uuid.js";
 import styles from "../store/enum-styles.js";
 import tags from "../store/enum-tags.js";
+import imageUrl from "../assets/recipe-photos/red_beans_and_rice.jpg";
 
 export default {
     key: uuid(),
     name: "Red beans & rice",
-    imageFileName: "red_beans_and_rice.jpg",
+    imageUrl,
     style: styles.cajun,
     tags: [tags.beans, tags.rice, tags.onePotMeal, tags.pork],
     sources: [

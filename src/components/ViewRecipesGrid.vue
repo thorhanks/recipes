@@ -28,7 +28,7 @@
             <div
                 class="flex-1 rounded-t-lg bg-cover"
                 :style="{
-                    'background-image': `url(../../public/recipe-photos/${recipe.imageFileName})`,
+                    'background-image': `url(${recipe.imageUrl})`,
                 }"
             />
             <div class="px-4 py-2 text-left rounded-b-lg font-sans">
