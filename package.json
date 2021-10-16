@@ -1,0 +1,33 @@
+{
+    "version": "0.0.1",
+    "name": "bitebook",
+    "description": "Pleasent UI to browse my recipe collection.",
+    "author": "Thor Hanks",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "serve": "vite preview",
+        "format": "prettier -w -u .",
+        "lint:script": "eslint --ext .js,vue --ignore-path .gitignore .",
+        "lint:style": "stylelint src/**/*.{css,scss,vue}"
+    },
+    "dependencies": {
+        "vue": "^3.2.16",
+        "vuex": "^4.0.2"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^1.9.3",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "eslint": "^8.0.0",
+        "eslint-plugin-prettier": "^3.4.1",
+        "eslint-plugin-vue": "^7.19.1",
+        "prettier": "^2.4.1",
+        "stylelint": "^13.13.1",
+        "stylelint-config-recommended": "^5.0.0",
+        "stylelint-config-standard": "^22.0.0",
+        "tailwindcss": "^2.2.16",
+        "vite": "^2.6.4"
+    }
+}
