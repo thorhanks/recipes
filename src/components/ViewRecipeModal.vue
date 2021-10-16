@@ -13,7 +13,7 @@
                         {{ name }}
                     </div>
                     <div class="mt-2 text-subtext">
-                        {{ styleLabel }}<span class="mx-2">▪</span>
+                        {{ styleLabel }} /
                         <a
                             v-for="source in sources"
                             :key="source.key"
@@ -31,7 +31,7 @@
                         >
                             {{ t
                             }}<span v-if="i < tags.length - 1" class="px-2"
-                                >▪</span
+                                >&#8226;</span
                             >
                         </span>
                     </div>
@@ -49,11 +49,11 @@
                         class="mb-5"
                         v-slot="{ item }"
                     >
-                        <div class="flex items-center">
+                        <div class="flex items-center text-sm md:text-base">
                             <div class="font-bold whitespace-nowrap">
                                 {{ item.amount }}
                             </div>
-                            <div class="px-2">▪</div>
+                            <div class="px-2">&#8226;</div>
                             <div>{{ item.label }}</div>
                         </div>
                     </base-grouped-list>
@@ -67,8 +67,8 @@
                         class="mb-5"
                         v-slot="{ item }"
                     >
-                        <div class="flex items-center">
-                            <div class="pr-3">▪</div>
+                        <div class="flex items-center text-sm md:text-base">
+                            <div class="pr-3">&#8226;</div>
                             <div>{{ item }}</div>
                         </div>
                     </base-grouped-list>

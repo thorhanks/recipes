@@ -1,3 +1,4 @@
+import sortBy from "../utilities/sort-by.js";
 import actions from "./actions";
 import gridTypes from "../store/enum-grid-types.js";
 import recipes from "../data-recipes/recipes.js";
@@ -12,35 +13,39 @@ export default {
     },
     getters: {
         filteredRecipes: (state) => {
-            return state.recipes.filter((r) => {
-                // IF there are no filters
-                if (
-                    state.searchText == null &&
-                    state.selectedStyleKeys.length === 0 &&
-                    state.selectedTagKeys.length === 0
-                ) {
-                    return true;
-                }
+            return sortBy(
+                state.recipes.filter((r) => {
+                    // IF there are no filters
+                    if (
+                        state.searchText == null &&
+                        state.selectedStyleKeys.length === 0 &&
+                        state.selectedTagKeys.length === 0
+                    ) {
+                        return true;
+                    }
 
-                // IF search exists and it matches recipe name
-                let matchesSearch = (r.name || "")
-                    .toLowerCase()
-                    .includes((state.searchText || "").toLowerCase());
-                if (state.searchText != null && matchesSearch) return true;
+                    // IF search exists and it matches recipe name
+                    let matchesSearch = (r.name || "")
+                        .toLowerCase()
+                        .includes((state.searchText || "").toLowerCase());
+                    if (state.searchText != null && matchesSearch) return true;
 
-                // IF recipe style matches
-                if (state.selectedStyleKeys.includes(r.style.key)) return true;
+                    // IF recipe style matches
+                    if (state.selectedStyleKeys.includes(r.style.key))
+                        return true;
 
-                // IF recipe tags match
-                let recipeTagKeys = r.tags.map((x) => x.key);
-                for (let i = 0; i < state.selectedTagKeys.length; i++) {
-                    let selectedKey = state.selectedTagKeys[i];
-                    if (recipeTagKeys.includes(selectedKey)) return true;
-                }
+                    // IF recipe tags match
+                    let recipeTagKeys = r.tags.map((x) => x.key);
+                    for (let i = 0; i < state.selectedTagKeys.length; i++) {
+                        let selectedKey = state.selectedTagKeys[i];
+                        if (recipeTagKeys.includes(selectedKey)) return true;
+                    }
 
-                // Nothing matched
-                return false;
-            });
+                    // Nothing matched
+                    return false;
+                }),
+                "name"
+            );
         },
     },
     mutations: {

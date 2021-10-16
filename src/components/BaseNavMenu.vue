@@ -1,6 +1,8 @@
 <template>
     <div class="text-left md:text-right font-sketch">
-        <div class="text-highlight1 uppercase text-xl mb-2">
+        <div
+            class="text-highlight1 uppercase text-base md:text-xl mb-0 md:mb-2"
+        >
             {{ title }}
         </div>
         <div
@@ -9,10 +11,10 @@
             class="inline-block md:block"
         >
             <span
-                class="cursor-pointer text-subtext hover:text-text"
+                class="cursor-pointer text-subtext hover:text-text text-lg"
                 :class="{
-                    'text-3xl': size === 'lg',
-                    'text-xl': size === 'md',
+                    'md:text-3xl': size === 'lg',
+                    'md:text-xl': size === 'md',
                     'text-highlight2': selectedOptionKeys.includes(option.key),
                     'hover:text-highlight2': selectedOptionKeys.includes(
                         option.key
@@ -25,7 +27,7 @@
             <span
                 v-if="i < options.length - 1"
                 class="mx-2 opacity-50 md:hidden"
-                >▪</span
+                >&#8226;</span
             >
         </div>
     </div>

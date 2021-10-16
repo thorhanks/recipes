@@ -3,15 +3,17 @@
         <div
             class="
                 font-sketch
-                text-highlight1 text-7xl
+                text-highlight1 text-4xl
                 md:text-5xl
                 lg:text-7xl
-                mb-5
+                mb-2
+                md:mb-5
             "
         >
             BiteBook
         </div>
         <base-nav-menu
+            :class="{ hidden: !navIsOpen }"
             title="Styles"
             :options="styleOptions"
             :selected-option-keys="selectedStyleKeys"
@@ -19,13 +21,21 @@
             @change="setSelectedStyleKeys"
         />
         <base-nav-menu
-            class="mt-9"
+            :class="{ hidden: !navIsOpen }"
+            class="mt-3 md:mt-9"
             title="Tags"
             :options="tagOptions"
             :selected-option-keys="selectedTagKeys"
             size="md"
             @change="setSelectedTagKeys"
         />
+        <div
+            class="text-center opacity-50 md:hidden cursor-pointer"
+            @click="navIsOpen = !navIsOpen"
+        >
+            <i v-if="navIsOpen" class="fas fa-caret-up"></i>
+            <i v-else class="fas fa-caret-down"></i>
+        </div>
     </div>
 </template>
 
@@ -42,6 +52,7 @@ export default {
     data: () => ({
         styleOptions: sortBy(Object.values(styles), "label"),
         tagOptions: sortBy(Object.values(tags), "label"),
+        navIsOpen: true,
     }),
     computed: {
         ...mapState({

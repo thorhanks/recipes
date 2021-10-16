@@ -12,7 +12,7 @@ export default {
     sources: [
         {
             key: uuid(),
-            label: "America's Test Kitchen: How to make red beans and rice",
+            label: "America's Test Kitchen",
             value: "https://www.youtube.com/watch?v=CZmklbHvo5Y",
         },
     ],

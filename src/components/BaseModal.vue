@@ -21,6 +21,8 @@
                 cursor-pointer
                 opacity-70
                 hover:opacity-100 hover:text-highlight2
+                text-xs
+                md:text-base
             "
             @click="close"
         >

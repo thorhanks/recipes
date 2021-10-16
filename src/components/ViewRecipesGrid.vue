@@ -36,7 +36,7 @@
                     {{ recipe.name }}
                 </div>
                 <div class="text-highlight1 text-xs truncate">
-                    {{ recipe.tags.map((x) => x.label).join(" ▪ ") }}
+                    {{ recipe.tags.map((x) => x.label).join(", ") }}
                 </div>
             </div>
         </div>
