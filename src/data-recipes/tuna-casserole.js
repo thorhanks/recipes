@@ -9,17 +9,11 @@ export default {
     imageUrl,
     style: styles.other,
     tags: [tags.seafood, tags.casserole, tags.pasta],
-    sources: [
-        {
-            key: uuid(),
-            label: "AllRecipes",
-            value: "https://www.allrecipes.com/recipe/17219/best-tuna-casserole/",
-        },
-    ],
+    sources: [],
     ingredients: [
         {
             key: uuid(),
-            label: "Main",
+            label: "Ingredients",
             ingredients: [
                 {
                     key: uuid(),

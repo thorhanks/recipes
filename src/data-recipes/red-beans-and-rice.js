@@ -19,7 +19,7 @@ export default {
     ingredients: [
         {
             key: uuid(),
-            label: "Main",
+            label: "Main ingredients",
             ingredients: [
                 {
                     key: uuid(),

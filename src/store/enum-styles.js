@@ -1,10 +1,12 @@
+import uuid from "../utilities/generate-uuid.js";
+
 export default {
     cajun: {
-        key: "style_cajun",
+        key: uuid(),
         label: "Cajun",
     },
     other: {
-        key: "style_other",
+        key: uuid(),
         label: "Other",
     },
 };

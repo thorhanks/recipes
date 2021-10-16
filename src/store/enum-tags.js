@@ -1,26 +1,40 @@
+import uuid from "../utilities/generate-uuid.js";
+
 export default {
+    instantPot: {
+        key: uuid(),
+        label: "Instant pot",
+    },
     beans: {
-        key: "tag_beans",
+        key: uuid(),
         label: "Beans",
     },
     rice: {
-        key: "tag_rice",
+        key: uuid(),
         label: "Rice",
     },
     pork: {
-        key: "tag_pork",
+        key: uuid(),
         label: "Pork",
     },
+    beef: {
+        key: uuid(),
+        label: "Beef",
+    },
     seafood: {
-        key: "tag_seafood",
+        key: uuid(),
         label: "Seafood",
     },
     casserole: {
-        key: "tag_casserole",
+        key: uuid(),
         label: "Casserole",
     },
     pasta: {
-        key: "tag_pasta",
+        key: uuid(),
         label: "Pasta",
+    },
+    chicken: {
+        key: uuid(),
+        label: "Chicken",
     },
 };
