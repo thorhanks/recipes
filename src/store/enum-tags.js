@@ -7,16 +7,20 @@ export default {
         key: "tag_rice",
         label: "Rice",
     },
-    onePotMeal: {
-        key: "tag_one_pot_meal",
-        label: "One pot meal",
-    },
     pork: {
         key: "tag_pork",
         label: "Pork",
     },
-    chicken: {
-        key: "tag_chicken",
-        label: "Chicken",
+    seafood: {
+        key: "tag_seafood",
+        label: "Seafood",
+    },
+    casserole: {
+        key: "tag_casserole",
+        label: "Casserole",
+    },
+    pasta: {
+        key: "tag_pasta",
+        label: "Pasta",
     },
 };

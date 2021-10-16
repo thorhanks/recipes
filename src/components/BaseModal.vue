@@ -16,8 +16,9 @@
         <div
             class="
                 absolute
-                top-6
-                right-7
+                top-4
+                right-5
+                md:top-6 md:right-7
                 cursor-pointer
                 opacity-70
                 hover:opacity-100 hover:text-highlight2

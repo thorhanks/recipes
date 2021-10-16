@@ -1,10 +1,10 @@
 export default {
-    mexican: {
-        key: "style_mexican",
-        label: "Mexican",
-    },
     cajun: {
         key: "style_cajun",
         label: "Cajun",
+    },
+    other: {
+        key: "style_other",
+        label: "Other",
     },
 };
