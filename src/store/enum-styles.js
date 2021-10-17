@@ -5,6 +5,10 @@ export default {
         key: uuid(),
         label: "Cajun",
     },
+    mexican: {
+        key: uuid(),
+        label: "Mexican",
+    },
     other: {
         key: uuid(),
         label: "Other",

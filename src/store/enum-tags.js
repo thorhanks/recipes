@@ -5,6 +5,10 @@ export default {
         key: uuid(),
         label: "Instant pot",
     },
+    marinade: {
+        key: uuid(),
+        label: "Marinade",
+    },
     beans: {
         key: uuid(),
         label: "Beans",
@@ -36,5 +40,13 @@ export default {
     chicken: {
         key: uuid(),
         label: "Chicken",
+    },
+    salad: {
+        key: uuid(),
+        label: "Salad",
+    },
+    quinoa: {
+        key: uuid(),
+        label: "Quinoa",
     },
 };

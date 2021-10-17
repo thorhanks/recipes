@@ -89,7 +89,7 @@ export default {
                 },
                 {
                     key: uuid(),
-                    label: "Four",
+                    label: "Flour",
                     amount: "1 tbsp",
                     calories: null,
                 },

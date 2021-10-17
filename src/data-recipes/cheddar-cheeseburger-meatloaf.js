@@ -5,7 +5,7 @@ import imageUrl from "../assets/recipe-photos/cheddar-cheeseburger-meatloaf.jpg"
 
 export default {
     key: uuid(),
-    name: "Tuna salad",
+    name: "Cheddar cheeseburger meatloaf",
     imageUrl,
     style: styles.other,
     tags: [tags.beef],
