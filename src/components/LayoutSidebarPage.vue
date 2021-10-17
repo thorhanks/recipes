@@ -6,7 +6,7 @@
         >
             <slot name="sidebar" />
         </div>
-        <div class="flex-1 overflow-y-auto p-5 md:text-left md:p-14">
+        <div class="flex-1 overflow-y-auto p-5 md:text-left pb-20 md:p-14">
             <slot name="content" />
         </div>
     </div>

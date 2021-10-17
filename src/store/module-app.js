@@ -58,6 +58,9 @@ export default {
         [actions.mutations.SET_SELECTED_TAG_KEYS](state, keys) {
             state.selectedTagKeys = keys;
         },
+        [actions.mutations.SET_SEARCH_TEXT](state, searchText) {
+            state.searchText = searchText;
+        },
     },
     actions: {},
 };
