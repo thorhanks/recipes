@@ -44,6 +44,7 @@
 <script>
 export default {
     name: "BaseModal",
+    emits: ["close"],
     data: () => ({
         show: false,
         escKeyHandler: null,
@@ -60,6 +61,7 @@ export default {
         },
         close() {
             this.show = false;
+            this.$emit("close");
         },
         addEscKeyListener() {
             this.escKeyHandler = (e) => {

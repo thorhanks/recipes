@@ -4,7 +4,7 @@ import tags from "../store/enum-tags.js";
 import imageUrl from "../assets/recipe-photos/chipotle-chicken-marinade.jpg";
 
 export default {
-    key: uuid(),
+    key: "chipotle-chicken-marinade",
     name: "Chipotle chicken marinade",
     imageUrl,
     style: styles.mexican,

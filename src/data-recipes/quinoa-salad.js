@@ -4,7 +4,7 @@ import tags from "../store/enum-tags.js";
 import imageUrl from "../assets/recipe-photos/quinoa-salad.jpg";
 
 export default {
-    key: uuid(),
+    key: "quinoa-salad",
     name: "Quinoa salad",
     imageUrl,
     style: styles.mexican,

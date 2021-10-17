@@ -4,7 +4,7 @@ import tags from "../store/enum-tags.js";
 import imageUrl from "../assets/recipe-photos/tuna-casserole.jpg";
 
 export default {
-    key: uuid(),
+    key: "tuna-casserole",
     name: "Tuna casserole",
     imageUrl,
     style: styles.other,

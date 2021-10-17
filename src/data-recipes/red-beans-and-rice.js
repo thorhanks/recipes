@@ -4,7 +4,7 @@ import tags from "../store/enum-tags.js";
 import imageUrl from "../assets/recipe-photos/red-beans-and-rice.jpg";
 
 export default {
-    key: uuid(),
+    key: "red-beans-rice",
     name: "Red beans & rice",
     imageUrl,
     style: styles.cajun,

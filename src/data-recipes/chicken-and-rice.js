@@ -4,7 +4,7 @@ import tags from "../store/enum-tags.js";
 import imageUrl from "../assets/recipe-photos/chicken-and-rice.jpg";
 
 export default {
-    key: uuid(),
+    key: "chicken-rice",
     name: "Chicken & rice",
     imageUrl,
     style: styles.other,

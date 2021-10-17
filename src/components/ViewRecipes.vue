@@ -9,13 +9,14 @@
                 @openRecipe="openRecipe"
             />
             <view-recipes-list v-else @openRecipe="openRecipe" />
-            <view-recipe-modal ref="recipeModal" />
+            <view-recipe-modal ref="recipeModal" @close="onRecipeClose" />
         </template>
     </layout-sidebar-page>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapGetters, mapMutations } from "vuex";
+import { setUrlParameterValueMutation } from "../utilities/vuex-plugin-url-param-sync.js";
 import gridTypes from "../store/enum-grid-types.js";
 import LayoutSidebarPage from "./LayoutSidebarPage.vue";
 import ViewRecipesSidebar from "./ViewRecipesSidebar.vue";
@@ -37,14 +38,35 @@ export default {
     }),
     computed: {
         ...mapState({
+            urlRecipeKey: (s) => s.urlParameters.recipekey,
             selectedGridType: (state) => state.app.selectedGridType,
         }),
+        ...mapGetters(["filteredRecipes"]),
     },
-    watch: {},
-    mounted() {},
+    mounted() {
+        if (this.urlRecipeKey) {
+            let recipe = this.filteredRecipes.find(
+                (r) => r.key === this.urlRecipeKey
+            );
+            if (recipe) this.openRecipe(recipe);
+        }
+    },
     methods: {
+        ...mapMutations({
+            setUrlParameterValueMutation,
+        }),
         openRecipe(recipe) {
             this.$refs.recipeModal.$show(recipe);
+            this.setUrlParameterValueMutation({
+                key: "recipekey",
+                value: recipe.key,
+            });
+        },
+        onRecipeClose() {
+            this.setUrlParameterValueMutation({
+                key: "recipekey",
+                value: null,
+            });
         },
     },
 };

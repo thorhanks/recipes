@@ -4,7 +4,7 @@ import tags from "../store/enum-tags.js";
 import imageUrl from "../assets/recipe-photos/hamburger-stroganoff.jpg";
 
 export default {
-    key: uuid(),
+    key: "hamburger-stroganoff",
     name: "Hamburger stroganoff",
     imageUrl,
     style: styles.other,

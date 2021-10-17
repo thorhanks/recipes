@@ -4,7 +4,7 @@ import tags from "../store/enum-tags.js";
 import imageUrl from "../assets/recipe-photos/salmon-patties.jpg";
 
 export default {
-    key: uuid(),
+    key: "salmon-patties",
     name: "Salmon patties",
     imageUrl,
     style: styles.other,

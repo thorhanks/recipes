@@ -4,7 +4,7 @@ import tags from "../store/enum-tags.js";
 import imageUrl from "../assets/recipe-photos/cheddar-cheeseburger-meatloaf.jpg";
 
 export default {
-    key: uuid(),
+    key: "cheddar-cheeseburger-meatloaf",
     name: "Cheddar cheeseburger meatloaf",
     imageUrl,
     style: styles.other,
