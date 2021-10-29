@@ -5,6 +5,10 @@ export default {
         key: uuid(),
         label: "Instant pot",
     },
+    potatoes: {
+        key: uuid(),
+        label: "Potatoes",
+    },
     marinade: {
         key: uuid(),
         label: "Marinade",

@@ -11,6 +11,7 @@
             flex flex-col
             py-8
             md:py-14
+            bg-opacity-95
         "
     >
         <div

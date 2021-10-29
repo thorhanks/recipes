@@ -13,7 +13,8 @@
                         {{ name }}
                     </div>
                     <div class="mt-2 text-subtext">
-                        {{ styleLabel }} <span v-if="sources.length">/</span>
+                        {{ styleLabel
+                        }}<span v-if="sources.length" class="mx-1">/</span>
                         <a
                             v-for="source in sources"
                             :key="source.key"

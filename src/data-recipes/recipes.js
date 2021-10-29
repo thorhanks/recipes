@@ -7,6 +7,12 @@ import hamburgerStroganoff from "./hamburger-stroganoff.js";
 import salmonPatties from "./salmon-patties.js";
 import quinoaSalad from "./quinoa-salad.js";
 import chipotleChickenMarinade from "./chipotle-chicken-marinade.js";
+import tacoPotion19 from "./taco-potion-19.js";
+import potatoSalad from "./potato-salad.js";
+import sausageAndCrescentRollCasserole from "./sausage-and-crescent-roll-casserole.js";
+import chickenTaterBake from "./chicken-tater-bake.js";
+import burritoBake from "./burrito-bake.js";
+import broccoliChickenCasserole from "./broccoli-chicken-casserole.js";
 
 const recipes = [];
 recipes.push(redBeansAndRice);
@@ -18,5 +24,11 @@ recipes.push(hamburgerStroganoff);
 recipes.push(salmonPatties);
 recipes.push(quinoaSalad);
 recipes.push(chipotleChickenMarinade);
+recipes.push(tacoPotion19);
+recipes.push(potatoSalad);
+recipes.push(sausageAndCrescentRollCasserole);
+recipes.push(chickenTaterBake);
+recipes.push(burritoBake);
+recipes.push(broccoliChickenCasserole);
 
 export default recipes;
